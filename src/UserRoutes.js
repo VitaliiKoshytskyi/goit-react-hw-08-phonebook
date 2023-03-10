@@ -18,7 +18,7 @@ const UserRoutes = () => {
         <Route path='/register' element={<RegisterPage />} />
           
         
-        {/* <Route path="*" element={<HomePage />} /> */}
+        <Route path="*" element={<HomePage />} />
       </Routes>
         </Suspense>
     )
