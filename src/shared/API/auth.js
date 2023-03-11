@@ -24,7 +24,21 @@ export const login = async (initData) => {
 }
 
 export const logout = async () => {
-    const { data } = await authInstance.post("/users/logout",)
+    const { data } = await authInstance.post("/users/logout")
       setToken()
     return data
+}
+
+export const getCurrent = async (token) => {
+    try {
+        setToken(token)
+        const { data } = await authInstance.get("/users/current")
+        console.log(data)
+    return data
+    } catch (error) {
+        setToken()
+        throw error
+        
+    }
+    
 }
