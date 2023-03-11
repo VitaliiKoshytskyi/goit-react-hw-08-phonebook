@@ -1,15 +1,13 @@
 import { useState, } from 'react';
 import { useDispatch } from 'react-redux';
-import { register } from 'redux/auth/auth-operations';
+import { login } from 'redux/auth/auth-operations';
+
+import css from './LoginForm.module.css'
 
 
-
-import css from './RegisterForm.module.css'
-
-
-const RegisterForm = () => {
-    const [state, setState] = useState({ name: '', email: '',password:'' });
-  const { name, email,password } = state;
+const LoginForm = () => {
+    const [state, setState] = useState({ email: '',password:'' });
+  const { email,password } = state;
   const dispatch = useDispatch();
 
  
@@ -25,25 +23,12 @@ const RegisterForm = () => {
   const handleSubmit = event => {
     event.preventDefault();
     const initialData = { ...state };
-    dispatch(register(initialData));
-    setState({ name: '', email: '',password:'' });
+    dispatch(login(initialData));
+    setState({ email: '',password:'' });
   };
     
      return (
     <form onSubmit={handleSubmit} className={css.form}>
-      <div className={css.formBox}>
-        <label>Name:</label>
-        <input
-          onChange={handleChange}
-          className={css.formText}
-          value={name}
-          type="text"
-          name="name"
-          placeholder='User Name'
-          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-          required
-        />
-      </div>
       <div className={css.formBox}>
         <label>Email:</label>
         <input
@@ -75,4 +60,4 @@ const RegisterForm = () => {
   );
 }
 
-export default RegisterForm
+export default LoginForm
