@@ -13,7 +13,7 @@ const NavbarUser = () => {
     
     
     return (
-        <div>{name},<button onClick={onLogout}>logoutT</button></div>
+        <div>{name},<button onClick={onLogout}>logout</button></div>
     )
 }
 

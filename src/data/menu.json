@@ -3,7 +3,8 @@
      {
         "id":3,
         "title":"Contacts",
-        "link":"/contacts"
+        "link":"/contacts",
+        "private":true
     }
 
     

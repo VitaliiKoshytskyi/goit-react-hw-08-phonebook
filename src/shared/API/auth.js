@@ -33,7 +33,7 @@ export const getCurrent = async (token) => {
     try {
         setToken(token)
         const { data } = await authInstance.get("/users/current")
-        console.log(data)
+        
     return data
     } catch (error) {
         setToken()
@@ -42,3 +42,5 @@ export const getCurrent = async (token) => {
     }
     
 }
+
+export default authInstance
