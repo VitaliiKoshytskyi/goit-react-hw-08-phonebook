@@ -7,7 +7,7 @@ import { isUserLogin } from 'redux/auth/auth-selections';
 import css from './Navbar.module.css';
 
 const NavBar = () => {
-  const isLogin = useSelector(isUserLogin)
+  const isLogin = useSelector(isUserLogin);
   return (
     <header className={css.header}>
       <PagesMenu />

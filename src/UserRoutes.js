@@ -8,28 +8,22 @@ const ContactsPage = lazy(() => import('pages/ContactsPage/ContactsPage'));
 const LoginPage = lazy(() => import('pages/LoginPage/LoginPage'));
 const RegisterPage = lazy(() => import('pages/RegisterPage/RegisterPage'));
 
-
 const UserRoutes = () => {
-    
-    return (
-      <Suspense fallback={<p>...Loading</p>}>
-        <Routes>
-          <Route element={<PublicRoute />}>
-<Route path='/login' element={<LoginPage />} />
-        <Route path='/register' element={<RegisterPage />} />
-          </Route>
-          <Route path='/' element={<HomePage />} />
-          <Route element={<PrivateRoute/>}>
- <Route path='/contacts' element={<ContactsPage />} />
-          </Route>
-       
-        
-          
-        
+  return (
+    <Suspense fallback={<p>...Loading</p>}>
+      <Routes>
+        <Route element={<PublicRoute />}>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+        </Route>
+        <Route path="/" element={<HomePage />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/contacts" element={<ContactsPage />} />
+        </Route>
         <Route path="*" element={<HomePage />} />
       </Routes>
-        </Suspense>
-    )
-}
+    </Suspense>
+  );
+};
 
-export default UserRoutes
+export default UserRoutes;

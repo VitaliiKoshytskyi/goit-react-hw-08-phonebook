@@ -1,18 +1,13 @@
-import { useState, } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/auth-operations';
 
-
-
-import css from './RegisterForm.module.css'
-
+import css from './RegisterForm.module.css';
 
 const RegisterForm = () => {
-    const [state, setState] = useState({ name: '', email: '',password:'' });
-  const { name, email,password } = state;
+  const [state, setState] = useState({ name: '', email: '', password: '' });
+  const { name, email, password } = state;
   const dispatch = useDispatch();
-
- 
 
   const handleChange = event => {
     const name = event.target.name;
@@ -26,10 +21,10 @@ const RegisterForm = () => {
     event.preventDefault();
     const initialData = { ...state };
     dispatch(register(initialData));
-    setState({ name: '', email: '',password:'' });
+    setState({ name: '', email: '', password: '' });
   };
-    
-     return (
+
+  return (
     <form onSubmit={handleSubmit} className={css.form}>
       <div className={css.formBox}>
         <label>Name:</label>
@@ -39,7 +34,7 @@ const RegisterForm = () => {
           value={name}
           type="text"
           name="name"
-          placeholder='User Name'
+          placeholder="User Name"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
         />
@@ -52,12 +47,12 @@ const RegisterForm = () => {
           value={email}
           type="email"
           name="email"
-        placeholder='User Email'
+          placeholder="User Email"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
-             </div>
-             <div className={css.formBox}>
+      </div>
+      <div className={css.formBox}>
         <label>Password:</label>
         <input
           onChange={handleChange}
@@ -65,7 +60,7 @@ const RegisterForm = () => {
           value={password}
           type="password"
           name="password"
-          placeholder='User Password'
+          placeholder="User Password"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
@@ -73,6 +68,6 @@ const RegisterForm = () => {
       <button type="submit">Register</button>
     </form>
   );
-}
+};
 
-export default RegisterForm
+export default RegisterForm;

@@ -1,12 +1,12 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 const NavbarAuth = () => {
-    
-    return (
-        <div>
-            <NavLink to="/register" >Register</NavLink> | <NavLink to="/login" >Login</NavLink>
-        </div>
-    )
-}
+  return (
+    <div>
+      <NavLink to="/register">Register</NavLink> |{' '}
+      <NavLink to="/login">Login</NavLink>
+    </div>
+  );
+};
 
-export default NavbarAuth
+export default NavbarAuth;

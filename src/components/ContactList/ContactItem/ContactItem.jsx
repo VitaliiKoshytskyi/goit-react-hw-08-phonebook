@@ -21,30 +21,26 @@ const ContactItem = () => {
   };
 
   const filteredContacts = getFilteredContacts();
-  
+
   const deleteContactHandler = id => {
     const action = deleteContact(id);
     dispatch(action);
   };
 
+  const element = filteredContacts.map(({ id, name, number }) => {
+    return (
+      <li key={id} className={css.item}>
+        <p className={css.name}>{name}</p>
+        <p className={css.phone}>{number}</p>
 
+        <div className={css.button}>
+          <button onClick={() => deleteContactHandler(id)}>Delete</button>
+        </div>
+      </li>
+    );
+  });
 
- const element = filteredContacts.map(({ id, name, number, }) => {
-
-
-  return (
-    <li key={id} className={css.item}>
-      <p className={css.name}>
-       {name} 
-      </p>
-      <p className={css.phone}>{number}</p>
-      
-      <div className={css.button}><button onClick={() => deleteContactHandler(id)}>Delete</button></div>
-    </li>
-  );
-});
-
-return element;
+  return element;
 };
 
 export default ContactItem;
