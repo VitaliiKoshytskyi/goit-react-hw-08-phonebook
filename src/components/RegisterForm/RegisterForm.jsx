@@ -25,47 +25,47 @@ const RegisterForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={css.form}>
+    <form className ={css.form} onSubmit={handleSubmit} >
       <div className={css.formBox}>
-        <label>Name:</label>
+        <label></label>
         <input
           onChange={handleChange}
-          className={css.formText}
+          className={css.input}
           value={name}
           type="text"
           name="name"
-          placeholder="User Name"
+          placeholder="Name"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
         />
       </div>
       <div className={css.formBox}>
-        <label>Email:</label>
+        <label></label>
         <input
           onChange={handleChange}
-          className={css.formText}
+          className={css.input}
           value={email}
           type="email"
           name="email"
-          placeholder="User Email"
+          placeholder="Email"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
       </div>
       <div className={css.formBox}>
-        <label>Password:</label>
+        <label></label>
         <input
           onChange={handleChange}
-          className={css.formText}
+          className={css.input}
           value={password}
           type="password"
           name="password"
-          placeholder="User Password"
-          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+          placeholder="Password"
+          minlength="8"
           required
         />
       </div>
-      <button type="submit">Register</button>
+      <button className={css.button} type="submit">Get started now</button>
     </form>
   );
 };

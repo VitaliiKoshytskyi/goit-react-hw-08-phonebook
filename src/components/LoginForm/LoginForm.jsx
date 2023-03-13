@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { login } from 'redux/auth/auth-operations';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 import css from './LoginForm.module.css';
 
@@ -27,32 +29,32 @@ const LoginForm = () => {
   return (
     <form onSubmit={handleSubmit} className={css.form}>
       <div className={css.formBox}>
-        <label>Email:</label>
+        <label></label>
         <input
           onChange={handleChange}
-          className={css.formText}
+          className={css.input}
           value={email}
           type="email"
           name="email"
-          placeholder="User Email"
+          placeholder="Email"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
       </div>
       <div className={css.formBox}>
-        <label>Password:</label>
+        <label></label>
         <input
           onChange={handleChange}
-          className={css.formText}
+          className={css.input}
           value={password}
           type="password"
           name="password"
-          placeholder="User Password"
+          placeholder="Password"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
       </div>
-      <button type="submit">Login</button>
+        <button className={css.button} type="submit">Sign In</button>
     </form>
   );
 };

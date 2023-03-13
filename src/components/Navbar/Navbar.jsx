@@ -10,7 +10,7 @@ const NavBar = () => {
   const isLogin = useSelector(isUserLogin);
   return (
     <header className={css.header}>
-      <PagesMenu />
+      <PagesMenu/>
       {!isLogin && <NavbarAuth />}
       {isLogin && <NavbarUser />}
     </header>

@@ -1,0 +1,17 @@
+.phonebook{
+font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.75;
+    letter-spacing: 0.0857em;
+    text-align: center;
+}
+
+.text{
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.75;
+        letter-spacing: 0.02857em;
+        text-align: center;
+}

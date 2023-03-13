@@ -12,7 +12,7 @@ const PagesMenu = () => {
       {title}
     </NavLink>
   ));
-  return <>{elements}</>;
+  return <div className={css.box}>{elements}</div>;
 };
 
 export default PagesMenu;
