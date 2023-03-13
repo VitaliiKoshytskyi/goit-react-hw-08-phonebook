@@ -1,4 +1,4 @@
-.App{
+/* .App{
     display: block;
     width: 550px;
     margin: 30px auto;
@@ -34,4 +34,10 @@
 }
 .text{
     text-align: center;
+} */
+
+.section{
+   
+    background-image: url(../images/phonebook.jpg);
+    object-fit: cover;
 }

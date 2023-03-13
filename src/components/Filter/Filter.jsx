@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
+
 import { setFilter } from 'redux/filter/filter-slice';
 import { getFilter } from 'redux/filter/filter-selectors';
 
@@ -14,10 +15,13 @@ const Filter = () => {
   };
 
   return (
+
+
     <input
       className={css.input}
       type="text"
       name={filter}
+      placeholder="Name"
       onChange={onInputChange}
     />
   );

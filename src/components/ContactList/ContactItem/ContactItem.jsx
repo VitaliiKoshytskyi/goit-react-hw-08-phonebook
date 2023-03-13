@@ -34,7 +34,7 @@ const ContactItem = () => {
         <p className={css.phone}>{number}</p>
 
         <div className={css.button}>
-          <button onClick={() => deleteContactHandler(id)}>Delete</button>
+          <button className={css.delete} onClick={() => deleteContactHandler(id)}>Delete</button>
         </div>
       </li>
     );

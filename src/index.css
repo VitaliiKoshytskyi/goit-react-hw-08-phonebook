@@ -16,7 +16,9 @@ code {
 }
 
 body {
-  background-color: rgb(136, 194, 85);
+  background-image: url(../src/images/phonebook.jpg);
+  background-size:cover;
+  
   box-sizing: border-box;
   font-size: 14px;
   padding: 0;
