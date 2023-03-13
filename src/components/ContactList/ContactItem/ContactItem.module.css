@@ -1,7 +1,6 @@
 .item {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   margin: 10px auto;
   padding: 10px;
   width: 70%;
@@ -13,10 +12,13 @@
   text-align: center;
 }
 .phone {
-  text-align: center;
+  margin-right: 50px;
+  width: 50%;
 }
 .name {
-  text-align: center;
+  width: 50%;
+
+  margin-right: 50px;
 }
 .created {
   text-align: center;

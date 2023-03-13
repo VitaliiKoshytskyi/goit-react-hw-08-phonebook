@@ -33,14 +33,14 @@ const ContactItem = () => {
         <p className={css.name}>{name}</p>
         <p className={css.phone}>{number}</p>
 
-        <div className={css.button}>
+       
           <button
             className={css.delete}
             onClick={() => deleteContactHandler(id)}
           >
             Delete
           </button>
-        </div>
+        
       </li>
     );
   });
