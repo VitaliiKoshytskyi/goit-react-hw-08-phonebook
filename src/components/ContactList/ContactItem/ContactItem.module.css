@@ -1,43 +1,39 @@
-.item{
-    
-    
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin: 10px auto;
-            padding: 10px;
-            width: 70%;
-            border: transparent;
-            border-radius: 5px;
-            background-color: rgb(239, 173, 230);
-            
-        
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px auto;
+  padding: 10px;
+  width: 70%;
+  border: transparent;
+  border-radius: 5px;
+  background-color: rgb(239, 173, 230);
 }
-.button{
-    text-align: center;
+.button {
+  text-align: center;
 }
-.phone{
-    text-align: center;
+.phone {
+  text-align: center;
 }
-.name{
-    text-align: center;
+.name {
+  text-align: center;
 }
-.created{
-    text-align: center;
+.created {
+  text-align: center;
 }
 
-.phone::before{
-content: "Phone number: ";
-color: #db1111;
+.phone::before {
+  content: 'Phone number: ';
+  color: #db1111;
 }
-.created::before{
-content: "Created: ";
-    color: #db1111;
+.created::before {
+  content: 'Created: ';
+  color: #db1111;
 }
-.name::before{
-content: "Name: ";
-    color: #db1111;
+.name::before {
+  content: 'Name: ';
+  color: #db1111;
 }
-.delete{
-    background-color: #4CAF50;
+.delete {
+  background-color: #4caf50;
 }

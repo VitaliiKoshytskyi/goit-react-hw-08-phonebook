@@ -25,7 +25,7 @@ const RegisterForm = () => {
   };
 
   return (
-    <form className ={css.form} onSubmit={handleSubmit} >
+    <form className={css.form} onSubmit={handleSubmit}>
       <div className={css.formBox}>
         <label></label>
         <input
@@ -65,7 +65,9 @@ const RegisterForm = () => {
           required
         />
       </div>
-      <button className={css.button} type="submit">Get started now</button>
+      <button className={css.button} type="submit">
+        Get started now
+      </button>
     </form>
   );
 };

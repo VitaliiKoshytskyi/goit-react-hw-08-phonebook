@@ -39,7 +39,7 @@ const ContactForm = () => {
           value={name}
           type="text"
           name="name"
-         placeholder="Name"
+          placeholder="Name"
           required
         />
       </div>
@@ -51,11 +51,13 @@ const ContactForm = () => {
           value={number}
           type="tel"
           name="number"
-         placeholder="Phone number"
+          placeholder="Phone number"
           required
         />
       </div>
-      <button className={css.button} type="submit">Add contact</button>
+      <button className={css.button} type="submit">
+        Add contact
+      </button>
     </form>
   );
 };

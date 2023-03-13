@@ -15,8 +15,6 @@ const Filter = () => {
   };
 
   return (
-
-
     <input
       className={css.input}
       type="text"

@@ -52,7 +52,9 @@ const LoginForm = () => {
           required
         />
       </div>
-        <button className={css.button} type="submit">Sign In</button>
+      <button className={css.button} type="submit">
+        Sign In
+      </button>
     </form>
   );
 };
