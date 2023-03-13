@@ -62,10 +62,11 @@ img {
 }
 button{
   border-radius: 5px;
-  border: 1px solid red;
+  border: transparent;
 }
-button:focus{
-  background-color: aqua;
+button:focus,
+button:hover{
+  background-color: rgb(8, 159, 79);
 }
 ul,li{
   padding: 0;
